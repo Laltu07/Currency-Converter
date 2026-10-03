@@ -1,0 +1,370 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 15% 20%, #5b21b6 0%, transparent 35%),
+        radial-gradient(circle at 85% 80%, #0369a1 0%, transparent 35%),
+        #070b18;
+
+    color: #ffffff;
+    padding: 20px;
+}
+
+
+/* Main Card */
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 35px;
+
+    background: rgba(17, 24, 39, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(20px);
+}
+
+
+/* Heading */
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+
+    background: linear-gradient(
+        90deg,
+        #a78bfa,
+        #60a5fa
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+
+/* Labels */
+
+label {
+    display: block;
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+
+/* Amount */
+
+.amount {
+    margin-bottom: 25px;
+}
+
+.amount input {
+    width: 100%;
+    height: 55px;
+
+    padding: 0 17px;
+
+    border: 1px solid #334155;
+    border-radius: 12px;
+
+    background: #0f172a;
+    color: white;
+
+    font-size: 18px;
+    outline: none;
+
+    transition: 0.25s;
+}
+
+.amount input:focus {
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+
+/* Currency section */
+
+.dropdown {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    align-items: end;
+    gap: 12px;
+}
+
+
+/* Currency box */
+
+.currency-box {
+    width: 100%;
+}
+
+
+/* Select container */
+
+.select-container {
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 8px 12px;
+
+    background: #0f172a;
+
+    border: 1px solid #334155;
+    border-radius: 12px;
+
+    transition: 0.25s;
+}
+
+.select-container:focus-within {
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 0 0 3px rgba(139, 92, 246, 0.12);
+}
+
+
+/* Flag */
+
+.select-container img {
+    width: 35px;
+    height: 26px;
+
+    object-fit: cover;
+
+    margin-right: 9px;
+
+    border-radius: 4px;
+}
+
+
+/* Select */
+
+.select-container select {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.select-container select option {
+    background: #111827;
+    color: white;
+}
+
+
+/* Swap Button */
+
+.swap-btn {
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #2563eb
+    );
+
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.swap-btn:hover {
+    transform: rotate(180deg) scale(1.08);
+
+    box-shadow:
+        0 10px 25px rgba(124, 58, 237, 0.4);
+}
+
+
+/* Exchange Rate */
+
+.msg {
+    margin-top: 25px;
+
+    text-align: center;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    background: rgba(139, 92, 246, 0.08);
+
+    border: 1px solid rgba(139, 92, 246, 0.18);
+
+    color: #c4b5fd;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Convert Button */
+
+.convert-btn {
+    width: 100%;
+    height: 55px;
+
+    margin-top: 18px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #2563eb
+    );
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 10px 25px rgba(79, 70, 229, 0.25);
+}
+
+.convert-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 30px rgba(79, 70, 229, 0.4);
+}
+
+.convert-btn:active {
+    transform: translateY(0);
+}
+
+
+/* Result */
+
+.result-box {
+    margin-top: 20px;
+
+    padding: 22px;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124, 58, 237, 0.16),
+            rgba(37, 99, 235, 0.12)
+        );
+
+    border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.result-box span {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+}
+
+.result-box h3 {
+    color: #ffffff;
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    word-break: break-word;
+}
+
+
+/* Mobile */
+
+@media (max-width: 520px) {
+
+    .container {
+        padding: 25px 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .dropdown {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .swap-btn {
+        margin: 0 auto;
+        transform: rotate(90deg);
+    }
+
+    .swap-btn:hover {
+        transform: rotate(270deg) scale(1.08);
+    }
+
+    .result-box h3 {
+        font-size: 19px;
+    }
+}
+```
